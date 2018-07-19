@@ -1,5 +1,6 @@
 <template>
-    <b-carousel id="Slider"
+<div id="Slider">
+    <b-carousel 
                 style="text-shadow: 1px 1px 2px #333;"
                 controls
                 indicators
@@ -37,6 +38,7 @@
                         :img-src="image4">
       </b-carousel-slide>
     </b-carousel>
+    </div>
 </template>
 <script>
 export default {
@@ -70,5 +72,10 @@ export default {
 }
 </script>
 <style scoped>
-
+    #Slider{
+        text-align: center;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
 </style>
