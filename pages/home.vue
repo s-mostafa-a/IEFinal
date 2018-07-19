@@ -1,12 +1,62 @@
 <template>
   <section class="container">
     <div>
-    <login-part/>
-    <div style="background-image: url('../pics/brands.png');position: relative;text-align: center;background-size: cover;">
-      <img src="../pics/tahvil.png" height="90px"/>
-      </div>
+      <!--app-logo/-->
+      <top-bar/>
+      <slider/>
+      <selling-types/>
+            <div class="center">
+            <div class="news" style="direction: rtl;color: darkgray;width: 30%;margin: 5px;">
+                <br>
+                <br>
+                <br>
+                <div style="text-align: center;">
+                    <div>
+                        <img src="../pics/mail_icon_hover.png" alt="clothster" width="30%" height="auto"/>
+                    </div>
+                    در خبرنامه‌ی ما
+                    <br>
+                    <span style="color: #ffffff;">
+                    <strong>
+                        عضو شوید!
+                    </strong>
+                    </span>
+                </div>
+                <div style="text-align: center">
+                    <div>
+                        <input type="text" class="news_input" style="" placeholder="آدرس ایمیل خود را وارد کنید"/>
+                        <input title="Search" value="&#9993;" type="button" class="news_button" style="width: 20%"/>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div style="direction: ltr; text-align: center">
+                    <button type="button" class="ozv">عضو شوید</button>
+                </div>
+                <br>
+            </div>
+            <div style="width: 70%; border:1px solid darkgray;margin: 5px;text-align: center;">
+                <div class="centeroid_button">
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <button type="button" class="tajrobe">تمام برندهای معتبر را با ما تجربه کنید</button>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+            </div>
+            <br>
+            <br>
+        </div>
       <buttom-bar/>
-      </div>
+    </div>
   </section>
 </template>
 
@@ -16,15 +66,13 @@ import ButtomBar from '~/components/ButtomBar.vue'
 import TopBar from '~/components/TopBar.vue'
 import Slider from '~/components/Slider.vue'
 import SellingTypes from '~/components/SellingTypes.vue'
-import LoginPart from '~/components/LoginPart.vue'
 export default {
   components: {
     AppLogo,
     ButtomBar,
     TopBar,
     Slider,
-    SellingTypes,
-    LoginPart
+    SellingTypes
   }
 }
 </script>
