@@ -2,26 +2,33 @@
   <section class="container">
     <div>
     <login-part/>
-
-      <user-info/>
+    <div style="background-image: url('../pics/brands.png');position: relative;text-align: center;background-size: cover;">
+      <img src="../pics/tahvil.png" height="90px"/>
+      </div>
+      <buy-basket/>
       <buttom-bar/>
       </div>
   </section>
 </template>
 
 <script>
+import AppLogo from '~/components/AppLogo.vue'
 import ButtomBar from '~/components/ButtomBar.vue'
 import TopBar from '~/components/TopBar.vue'
+import Slider from '~/components/Slider.vue'
+import SellingTypes from '~/components/SellingTypes.vue'
 import LoginPart from '~/components/LoginPart.vue'
-import UserInfo from '~/components/UserInfo.vue'
+import BuyBasket from '~/components/BuyBasket.vue'
 
 export default {
   components: {
+    AppLogo,
     ButtomBar,
     TopBar,
+    Slider,
+    SellingTypes,
     LoginPart,
-    UserInfo
-
+    BuyBasket
   }
 }
 </script>
