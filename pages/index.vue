@@ -5,6 +5,7 @@
     <div style="background-image: url('../pics/brands.png');position: relative;text-align: center;background-size: cover;">
       <img src="../pics/tahvil.png" height="90px"/>
       </div>
+      <buy-basket/>
       <buttom-bar/>
       </div>
   </section>
@@ -17,6 +18,8 @@ import TopBar from '~/components/TopBar.vue'
 import Slider from '~/components/Slider.vue'
 import SellingTypes from '~/components/SellingTypes.vue'
 import LoginPart from '~/components/LoginPart.vue'
+import BuyBasket from '~/components/BuyBasket.vue'
+
 export default {
   components: {
     AppLogo,
@@ -24,7 +27,8 @@ export default {
     TopBar,
     Slider,
     SellingTypes,
-    LoginPart
+    LoginPart,
+    BuyBasket
   }
 }
 </script>
