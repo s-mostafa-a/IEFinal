@@ -3,24 +3,9 @@
     <div>
       <!--app-logo/-->
       <top-bar/>
-      <h1 class="title">
-        clothster
-      </h1>
-      <h2 class="subtitle">
-        IE course final project
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green">Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey">GitHub</a>
-      </div>
-    </div>
+      <slider/>
       <buttom-bar/>
+    </div>
   </section>
 </template>
 
@@ -28,11 +13,14 @@
 import AppLogo from '~/components/AppLogo.vue'
 import ButtomBar from '~/components/ButtomBar.vue'
 import TopBar from '~/components/TopBar.vue'
+import Slider from '~/components/Slider.vue'
+
 export default {
   components: {
     AppLogo,
     ButtomBar,
-    TopBar
+    TopBar,
+    Slider
   }
 }
 </script>
