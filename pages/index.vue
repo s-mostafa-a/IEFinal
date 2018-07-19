@@ -4,6 +4,7 @@
       <!--app-logo/-->
       <top-bar/>
       <slider/>
+      <selling-types/>
       <buttom-bar/>
     </div>
   </section>
@@ -14,18 +15,19 @@ import AppLogo from '~/components/AppLogo.vue'
 import ButtomBar from '~/components/ButtomBar.vue'
 import TopBar from '~/components/TopBar.vue'
 import Slider from '~/components/Slider.vue'
-
+import SellingTypes from '~/components/SellingTypes.vue'
 export default {
   components: {
     AppLogo,
     ButtomBar,
     TopBar,
-    Slider
+    Slider,
+    SellingTypes
   }
 }
 </script>
 
-<style>
+<style scoped>
 .container {
   min-height: 100vh;
   justify-content: center;

@@ -1,23 +1,39 @@
 <template>
 <div class="nav_bar_top">
-    <div>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <div style="width: 30%">
         <input type="text" class="search_box" placeholder="جست و جو"/>
         <input title="Search" value="&#128269;" type="button" class="search_button" style="width: 20%"/>
     </div>
     <div class="flex_grower" style="color: dimgray;">clothster</div>
-    <div v-if="isLogin">
-        <b-dropdown id="ddown1" v-bind:text="name">
+    <div style="width: 30%">
+    <div v-if="isLogin" id="cont" >
+        <div style="text-align: center;">
+        <b-button :size="size" variant="link">
+        <i class="fa fa-list-alt"></i>
+        <a href="" style="font-size: 10px;"> پیگیری سفارش 
+        </a>
+        </b-button>
+        </div>
+        <div>
+        <b-button :size="size" variant="link">
+            <i class="fa fa-shopping-basket"></i>
+        <a href="" style="font-size: 10px;"> سبد خرید </a>
+        </b-button>
+
+        </div>
+        <b-dropdown id="ddown1" variant="link" v-bind:text="name" size="sm">
             <b-dropdown-item>پروفایل</b-dropdown-item>
             <b-dropdown-item>سفارشات</b-dropdown-item>
             <b-dropdown-item>علایق</b-dropdown-item>
             <b-dropdown-divider></b-dropdown-divider>
             <b-dropdown-item>خروج</b-dropdown-item>
         </b-dropdown>
-
     </div>
     <div v-else>
         <button type="button" class="sign_in">ورود</button>
         <button type="button" class="sign_up">عضویت</button>
+    </div>
     </div>
 </div>
 </template>
@@ -42,7 +58,13 @@ data() {
     font-family: "my_iran_sans";
     src: url("./fonts/IRAN-sans.ttf");
 }
-
+#ddown1{
+    color: #212121;
+    -webkit-text-fill-color: dimgray;        
+}
+#cont{
+    display: flex;
+}
 * {
     font-family: "my_iran_sans";
 }
