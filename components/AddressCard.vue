@@ -159,6 +159,28 @@
 
         </form>
     </div>
+    <button type="button" class="tajrobe"> اضافه کردن آدرس جدید </button>
+    <br>
+    <br>
+    <div style="float: right;">
+        <span style="color: dimgray;">زمان دریافت سفارش</span>
+        <div dir="rtl">
+  <b-dropdown id="ddown-header" :text="day" class="m-2">
+    <b-dropdown-header>{{day}}</b-dropdown-header>
+        <b-dropdown-item-button>{{day1}}</b-dropdown-item-button>
+    <b-dropdown-item-button>{{day2}}</b-dropdown-item-button>
+    <b-dropdown-item-button>{{day3}}</b-dropdown-item-button>
+  </b-dropdown>
+  <br>
+</div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+          <button type="button" class="tajrobe" style="height: 40px"> ثبت و مرحله بعد </button>
+    <br>
+    
 </div>
 </template>
 
@@ -173,8 +195,12 @@ export default {
             home_no:'phone',
             mobile: 'mobile',
             name:'name',
-            number:20,
+            number:2,
             send_price: 30000,
+            day: 'شنبه',
+            day1:'یکشنبه',
+            day2:'دوشنبه',
+            day3:'سه شنبه'
         }
     }
     
@@ -189,7 +215,17 @@ export default {
 * {
     font-family: "my_iran_sans";
 }
-
+.tajrobe{
+    float: left;
+    font-size: 100%;
+    border: 1px solid #6464ff;
+    border-radius: 25px;
+    width: 20%;
+    color: #ffffff;
+    -webkit-transition: background-color 0.4s ease;
+    transition: background-color 0.4s ease;
+    background-color: #3232ff;
+}
 .table  {    border: 1px solid black;
 background-color:lightgray;}
 .table td{    border: 1px solid black;
