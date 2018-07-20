@@ -1,103 +1,181 @@
 <template>
 <div>
     <b-container fluid class="p-4 ">
-      <b-row id="brow" style="direction: rtl;">
-          <b-col> مشخصات محصول </b-col>
-          <b-col> تعداد </b-col>
-          <b-col> قیمت </b-col>
-      </b-row>
-      <b-row id="brow2" style="direction: rtl;">
-          <b-col style="display: flex;">
-              <b-col>
-                     <img :src="img" width="80px" height="80px">
-              </b-col>
-              <b-col style="font-size:8px; float: right;">
-                   {{brand}}<br>
-                   {{prname}}<br>
-                   {{color}}<br>
-                   {{size}}<br>
-                   {{code}}
-               </b-col>
+<b-table striped :fields="fields" :items="items" dir="rtl" >
+    <template slot="mosh" slot-scope="data">
+        <div style="display: flex;margin: auto;text-align:center;">
+            <div>
+                    <img :src="data.value.pic" width="80px" height="80px"/>
+            </div>
+            <div style="font-size: 10px">
+                <div style="font-size: 15px">
+              {{data.value.brand}}
+              </div>
+               <div> 
+                {{data.value.name}}
+                            </div>
+               <div> 
+              {{data.value.color}}
+                            </div>
+               <div> 
+              {{data.value.size}}
+                            </div>
+               <div> 
+              {{data.value.code}}
+                            </div>
+              </div>
+        </div>
+    </template>
+    <template slot="ted" slot-scope="data">
+        <incer :number=1 />
+    </template>
+    <template slot="gh" slot-scope="data">
+        <div>
+              {{data.value.price}}<br>
+              {{data.value.off}}<hr>
+              {{data.value.final}}
 
-          </b-col>
-          <b-col style="margin: auto;">
-              <button type="button" class="gerd" v-on:click="inc"> + </button>
-              {{no}}
-              <button type="button" class="gerd" v-on:click="dec"> - </button>
-          </b-col>
-          <b-col style="margin: auto;"> 
-              {{price}}
-              <button type="button" class="tajrobe" > حذف </button>
-          </b-col>
-      </b-row>
+        </div>
+
+    </template>
+        <!--template slot="mosh" slot-scope="data">
+            <img :src="data.mosh.pic" width="80px" height="80px"/>
+    </template-->
+</b-table>
+
       </b-container>
 <button type="button" class="tajrobe">ثبت و مرحله بعد</button>
 
 </div>
 </template>
 <script>
+import Incer from '~/components/Incer.vue'
 export default {
-    data(){
-        return{
-            brand: 'brand',
-            prname: 'product name',
-            color: 'color',
-            size: 'size',
-            code: 'code',
-            no: 0,
-            price: 'price'
+    components:{
+        Incer,
+    },
+  data() {
+    return {
+      fields: [
+        {
+          key: "index",
+          label: "ردیف",
+          formatter: "indexer"
+        },
+        {
+          key: "mosh",
+          label: "مشخصات",
+          formatter: "mosher"
+        },
+        {
+          key: "ted",
+          label: "تعداد",
+          formatter: "teder"
+        },
+        {
+          key: "gh",
+          label: "قیمت",
+          formatter: "gher"
+        }
+      ],
+      items: [
+        {index: 1,
+          mosh: {
+            pic: "URL",
+            brand: "Doe",
+            name: "name",
+            color: "color",
+            size: "size",
+            code: "code"
+          },
+          ted: 1,
+          gh: { price: "price", off: "off", final: "final" }
+        },        
+        {index: 2,
+          mosh: {
+            pic: "URL",
+            brand: "Doe",
+            name: "name",
+            color: "color",
+            size: "size",
+            code: "code"
+          },
+          ted: 1,
+          gh: { price: "price", off: "off", final: "final" }
+        }
+        
+      ]
+    };
+  },
+  methods: {
+    dec: function(inde) {
+        for(var i in this.items){
+            if(i.index == inde){
+                if(i.ted > 0)
+                    i.ted -= 1;
+            }
+        }
+              
+
+    },
+    inc: function(inde) {
+        for(var i in this.items.value){
+            console.log(i.index)
         }
     },
-    methods:{
-        dec: function(){
-            if(this.no>0)
-                this.no -=1;
-        },
-        inc: function(){
-                this.no +=1;
-        }
+    indexer: function(value) {
+      return value;
+    },
+    mosher: function(value) {
+      return value;
+    },
+    teder: function(value) {
+      return value;
+    },
+    gher: function(value) {
+      return value;
     }
-}
+  }
+};
 </script>
 
 <style scoped>
-
 @font-face {
-    font-family: "my_iran_sans";
-    src: url("./fonts/IRAN-sans.ttf");
+  font-family: "my_iran_sans";
+  src: url("./fonts/IRAN-sans.ttf");
 }
 
 * {
-    font-family: "my_iran_sans";
+  font-family: "my_iran_sans";
 }
 
-.tajrobe{
-    float: left;
-    font-size: 100%;
-    border: 1px solid #6464ff;
-    border-radius: 25px;
-    width: 15%;
-    color: #ffffff;
-    -webkit-transition: background-color 0.4s ease;
-    transition: background-color 0.4s ease;
-    background-color: #3232ff;
+.tajrobe {
+  float: left;
+  font-size: 100%;
+  border: 1px solid #6464ff;
+  border-radius: 25px;
+  width: 15%;
+  color: #ffffff;
+  -webkit-transition: background-color 0.4s ease;
+  transition: background-color 0.4s ease;
+  background-color: #3232ff;
 }
-#brow{
-    background-color: gray;
-    color: white;
+#brow {
+  background-color: gray;
+  color: white;
 }
-#brow2{
-    background-color: white;
-    color: black;
+#brow2 {
+  background-color: white;
+  color: black;
 }
-.gerd{
-    font-size: 100%;
-    border: 1px solid #6464ff;
-    border-radius: 50px;
-    width: 10%;
-    color: #ffffff;
-    -webkit-transition: background-color 0.4s ease;
-    transition: background-color 0.4s ease;
-    background-color: #3232ff;
+.gerd {
+  font-size: 100%;
+  border: 1px solid #6464ff;
+  border-radius: 50px;
+  width: 10%;
+  color: #ffffff;
+  -webkit-transition: background-color 0.4s ease;
+  transition: background-color 0.4s ease;
+  background-color: #3232ff;
 }
 </style>

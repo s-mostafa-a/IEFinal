@@ -101,9 +101,6 @@
     width: 30%;
 }
 
-.blut-input{
-
-}
 
 .page-header {
     width: 93%;

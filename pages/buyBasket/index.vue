@@ -2,7 +2,7 @@
   <section class="container">
     <div>
     <login-part/>
-    <div style="background-image: url('../../pics/brands.png');position: relative;text-align: center;background-size: cover;">
+    <div style="position: relative;text-align: center;background-size: cover;">
       <img src="../../pics/tahvil.png" height="90px"/>
       </div>
       <buy-basket/>
@@ -21,7 +21,6 @@ import BuyBasket from '~/components/BuyBasket.vue'
 
 export default {
   components: {
-    AppLogo,
     ButtomBar,
     TopBar,
     Slider,
@@ -78,7 +77,7 @@ export default {
     border-radius: 0 25px 25px 0;
 }
 .centeroid_button{
-    background-image: url("../../pics/brands.png");
+    background-image: url("~/pics/brands.png");
     position: relative;
     text-align: center;
     background-size: cover;
