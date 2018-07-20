@@ -2,7 +2,20 @@
   <section class="container">
     <div>
       <top-bar/>
-      <!--product-slide/-->
+      <div style="display:flex;direction:rtl;">
+        <div style="width: 20%">
+          <product-type/>
+      <color-box/>
+      </div>
+
+
+      </div>
+
+
+
+
+
+
       <brand-box/>
       <buttom-bar/>
       </div>
