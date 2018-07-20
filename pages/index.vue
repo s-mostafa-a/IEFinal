@@ -8,7 +8,31 @@
                 <brand-box/>
       <color-box/>
       </div>
+      <div style="padding: 20px">
+        <search-page-top/>
+        <hr>
 
+        <div style="display: flex;">
+          <div v-for="i in 4" :key="i" style=" margin: 10px">
+        <product-card/>
+        </div>
+        </div>
+                <div style="display: flex;">
+          <div v-for="i in 4" :key="i" style=" margin: 10px">
+        <product-card/>
+        </div>
+        </div>
+                <div style="display: flex;">
+          <div v-for="i in 4" :key="i" style=" margin: 10px">
+        <product-card/>
+        </div>
+        </div>
+                <div style="display: flex;">
+          <div v-for="i in 4" :key="i" style=" margin: 10px">
+        <product-card/>
+        </div>
+        </div>
+      </div>
 
       </div>
 

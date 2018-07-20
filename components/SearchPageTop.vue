@@ -1,17 +1,27 @@
 <template>
     <div style="display: flex;margin:auto;">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-            <b-button size="sm" variant="secondary">      
-            <i class="fa fa-caret-square-o-left" @click="dec" style="font-size:36px"></i>
+        <div>
+        مرتب‌سازی بر اساس:
+        </div>
+        <div>
+    <b-dropdown id="ddown1" variant="link" text="محبوبترین" size="sm">
+            <b-dropdown-item>گرانترین</b-dropdown-item>
+            <b-dropdown-item>ارزانترین</b-dropdown-item>
+            <b-dropdown-item>مرتبط‌ترین</b-dropdown-item>
+        </b-dropdown>
+        </div>
+        	&nbsp;
 
-            </b-button> <div style="text-align: center;margin:auto;">
-            صفحه‌ی {{page_no}} از {{page_max}}
-            </div>
-            <b-button size="sm" v-on:click="inc" variant="secondary">
-                <i class="fa fa-caret-square-o-right" style="font-size:36px"></i>
-            </b-button> 
+                                	&nbsp;
+                                    	&nbsp;	&nbsp;
+                                        	&nbsp;
+                                            	&nbsp;
+                                                	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;
+        <div >
 
-            <br>
+            <b-pagination  size="md" :total-rows="100" v-model="currentPage" :per-page="10">
+    </b-pagination>
+        </div>
     </div>
 </template>
 <script>
