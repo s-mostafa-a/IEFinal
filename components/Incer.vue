@@ -1,9 +1,7 @@
 <template>
     <div>
         <my-button1 @clickedd="cleckHandler" />
-        <div>
             {{myn}}
-        </div>
         <MyButton @clickedd="cleckHandler" />
 
     </div>
@@ -27,7 +25,6 @@ export default {
     },
     methods: {
         cleckHandler: function(e) {
-            alert(e);
             if(e == 1)
             this.myn -= 1;
             else

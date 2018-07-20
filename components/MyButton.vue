@@ -1,6 +1,6 @@
 <template>
     <button   v-on:click="inputHandler"
-                 >-</button>
+                 class="tajrobe">-</button>
     
 </template>
 
@@ -23,5 +23,13 @@ export default {
 
 
 <style scoped>
-
+.tajrobe{
+    font-size: 100%;
+    border: 1px solid black;
+    border-radius: 25px;
+    color: #ffffff;
+    -webkit-transition: background-color 0.4s ease;
+    transition: background-color 0.4s ease;
+    background-color: dimgray;
+}
 </style>
