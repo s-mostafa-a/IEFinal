@@ -1,6 +1,9 @@
 <template>
   <section class="container">
     <div>
+      <top-bar/>
+      <!--product-slide/-->
+      <brand-box/>
       <buttom-bar/>
       </div>
   </section>
@@ -14,6 +17,8 @@ import ColorBox from '~/components/ColorBox.vue'
 import ProductCard from '~/components/ProductCard.vue'
 import ProductType from '~/components/ProductType.vue'
 import SearchPageTop from '~/components/SearchPageTop.vue'
+import ProductSlide from '~/components/ProductSlide.vue'
+
 
 
 
@@ -25,7 +30,8 @@ export default {
     ColorBox,
     ProductCard,
     ProductType,
-    SearchPageTop
+    SearchPageTop,
+    ProductSlide
 
   }
 }
