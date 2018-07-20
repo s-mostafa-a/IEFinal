@@ -41,6 +41,10 @@
     </div>
 </template>
 <script>
+fetch(url) 
+.then(function(data) {
+    image1 = JSON.stringify(data.banners[0]);
+})
 export default {
     data () {
     return {
