@@ -15,37 +15,46 @@
 
       <!-- Text slides with image -->
       <b-carousel-slide :caption="caption1"
-                        :text="text1"
-                        :img-src="image1"
-      ></b-carousel-slide>
+                        :text="text1">
+                          <b-img-lazy slot="img" class="d-block img-fluid w-100 my-5" :src="image1" center fluid-grow width="100" height="180" blank-color="#bbb" alt="img" />
+      </b-carousel-slide>
 
       <!-- Slides with custom text -->
       <b-carousel-slide :caption="caption2"
-                        :text="text2"
-                        :img-src="image2">
+                        :text="text2">
+                          <b-img-lazy slot="img" class="d-block img-fluid w-100 my-5" :src="image2" center fluid-grow width="100" height="180" blank-color="#bbb" alt="img" />
       </b-carousel-slide>
 
       <!-- Slides with image only -->
       <b-carousel-slide :caption="caption3"
-                        :text="text3"
-                        :img-src="image3">
+                        :text="text3">
+                          <b-img-lazy slot="img" class="d-block img-fluid w-100 my-5" :src="image3" center fluid-grow width="100" height="180" blank-color="#bbb" alt="img" />
       </b-carousel-slide>
 
       <!-- Slides with img slot -->
       <!-- Note the classes .d-block and .img-fluid to prevent browser default image alignment -->
       <b-carousel-slide :caption="caption4"
-                        :text="text4"
-                        :img-src="image4">
+                        :text="text4">
+                          <b-img-lazy slot="img" class="d-block img-fluid w-100 my-5" :src="image4" center fluid-grow width="100" height="180" blank-color="#bbb" alt="img" />
       </b-carousel-slide>
     </b-carousel>
     </div>
 </template>
 <script>
-fetch(url) 
-.then(function(data) {
-    image1 = JSON.stringify(data.banners[0]);
-})
-export default {
+import axios from 'axios';
+
+export default {/*
+     created() {
+    axios.get(`http://127.0.0.1:3000/homepage/`)
+    .then(response => {
+      // JSON responses are automatically parsed.
+      console.log(response.data)
+      //this.image1 = response.data.banners[0];
+    })
+    .catch(e => {
+      this.errors.push(e)
+    })
+    },*/
     data () {
     return {
         text1: 'text1',
