@@ -1,6 +1,6 @@
 <template>
 <div>
-    <b-container fluid class="p-4 ">
+<b-container fluid class="p-4 ">
 <b-table striped :fields="fields" :items="items" dir="rtl" >
     <template slot="mosh" slot-scope="data">
         <div style="display: flex;margin: auto;text-align:center;">
@@ -44,7 +44,6 @@
 </b-table>
 
       </b-container>
-<button type="button" class="tajrobe">ثبت و مرحله بعد</button>
 
 </div>
 </template>

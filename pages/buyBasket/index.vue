@@ -6,6 +6,7 @@
       <img src="../../pics/tahvil.png" height="90px"/>
       </div>
       <buy-basket/>
+      <button type="button" class="tajrobe">ثبت و مرحله بعد</button>
       <buttom-bar/>
       </div>
   </section>
@@ -84,9 +85,10 @@ export default {
 }
 .tajrobe{
     font-size: 20px;
+    float: left;
     border: 1px solid #6464ff;
     border-radius: 25px;
-    width: 50%;
+    width: 20%;
     color: #ffffff;
     -webkit-transition: background-color 0.4s ease;
     transition: background-color 0.4s ease;

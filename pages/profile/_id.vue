@@ -34,7 +34,7 @@
         <br>
         <br>
         <br>
-        <buy-basket/>
+<orders/>
     </b-collapse>
 
         <br>
@@ -51,6 +51,7 @@ import TopBar from '~/components/TopBar.vue'
 import UserInfo from '~/components/UserInfo.vue'
 import AddressCard from '~/components/AddressCard.vue'
 import BuyBasket from '~/components/BuyBasket.vue'
+import Orders from '~/components/Orders.vue'
 
 
 
@@ -69,7 +70,8 @@ export default {
     TopBar,
     UserInfo,
     AddressCard,
-    BuyBasket
+    BuyBasket,
+    Orders
 
   }
 }
