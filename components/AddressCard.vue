@@ -1,17 +1,6 @@
 <template>
 <div class="tg-wrap">
-    <div>
-    <img src='../pics/addr.png' height="100px"/>
-    </div>
-    <br>
-    <br>
-    <div style="margin: auto; text-align:center">
-        :هزینه ارسال
-        <div style="color: #18bbb9;">
-            <span style="font-size: 20px">{{send_price}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><span style="font-size:15px">تومان</span></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        </div>
-        
-    </div>
+
     <div style="direction: rtl;width: 100%;margin: auto;text-align: center;">
     <form action="/Cart/Shipping" method="post" id="changeAddressForm" novalidate="novalidate">
             <div class="address-list">
@@ -160,26 +149,6 @@
         </form>
     </div>
     <button type="button" class="tajrobe"> اضافه کردن آدرس جدید </button>
-    <br>
-    <br>
-    <div style="float: right;">
-        <span style="color: dimgray;">زمان دریافت سفارش</span>
-        <div dir="rtl">
-  <b-dropdown id="ddown-header" :text="day" class="m-2">
-    <b-dropdown-header>{{day}}</b-dropdown-header>
-        <b-dropdown-item-button>{{day1}}</b-dropdown-item-button>
-    <b-dropdown-item-button>{{day2}}</b-dropdown-item-button>
-    <b-dropdown-item-button>{{day3}}</b-dropdown-item-button>
-  </b-dropdown>
-  <br>
-</div>
-    </div>
-    <br>
-    <br>
-    <br>
-    <br>
-          <button type="button" class="tajrobe" style="height: 40px"> ثبت و مرحله بعد </button>
-    <br>
     
 </div>
 </template>

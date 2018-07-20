@@ -12,7 +12,6 @@
 </template>
 
 <script>
-import AppLogo from '~/components/AppLogo.vue'
 import ButtomBar from '~/components/ButtomBar.vue'
 import TopBar from '~/components/TopBar.vue'
 import Slider from '~/components/Slider.vue'
