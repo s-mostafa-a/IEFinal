@@ -1,22 +1,30 @@
 <template>
-    <div >  
-        <b-card>
-<b-btn v-b-toggle.Collapse1>
-  <span class="when-opened">Close</span>
-  <span class="when-closed">Open</span>
-  My Collapse
+<div>
+<div dir="rtl" style="display: flex">
+<b-btn  variant="outline-success" v-b-toggle.collapseb   style="width: 100%">
+  <span class="when-opened">بر اساس برند -</span>
+  <span class="when-closed">بر اساس برند +</span>
 </b-btn>
-<div id="Collapse1" >
-        <p class="card-text">
-            Some quick example text to build on the <em>card title</em> and make up the bulk of the card's content.
-        </p>
-        <a href="#"
-           class="card-link">Card link</a>
-        <b-link href="#"
-                class="card-link">Another link</b-link>
 </div>
-        </b-card>
-    </div>
+
+  <b-collapse id="collapseb" class="mt-2">
+          <b-card>
+              <div>
+                  <b-input placeholder="نام برند"/>
+              </div>
+            <div style="float: right">
+            <b-checkbox title="1"> برند</b-checkbox>
+            <hr>
+                        <b-checkbox title="1"> برند</b-checkbox>
+            <hr>
+                        <b-checkbox title="1"> برند</b-checkbox>
+            <hr>
+                        <b-checkbox title="1"> برند</b-checkbox>
+            <hr>
+            </div>
+    </b-card>
+  </b-collapse>
+</div>
 </template>
 <script>
 export default {

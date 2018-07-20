@@ -1,7 +1,7 @@
 <template>
 <div>
 <div dir="rtl" style="display: flex">
-<b-btn  variant="outline-success" v-b-toggle.collapse1 >
+<b-btn  variant="outline-success" v-b-toggle.collapse1 style="width: 100%">
   <span class="when-opened">نام دسته -</span>
   <span class="when-closed">نام دسته +</span>
 </b-btn>

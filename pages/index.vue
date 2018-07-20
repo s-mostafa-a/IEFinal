@@ -5,6 +5,7 @@
       <div style="display:flex;direction:rtl;">
         <div style="width: 20%">
           <product-type/>
+                <brand-box/>
       <color-box/>
       </div>
 
@@ -16,7 +17,6 @@
 
 
 
-      <brand-box/>
       <buttom-bar/>
       </div>
   </section>
