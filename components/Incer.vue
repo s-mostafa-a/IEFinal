@@ -25,8 +25,9 @@ export default {
     },
     methods: {
         cleckHandler: function(e) {
-            if(e == 1)
-            this.myn -= 1;
+            if(e == 1){
+                if(this.myn>0)
+                    this.myn -= 1;}
             else
             this.myn += 1;
 
