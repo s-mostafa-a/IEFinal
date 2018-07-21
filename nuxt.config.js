@@ -38,6 +38,8 @@ module.exports = {
 
   modules: [
     'bootstrap-vue/nuxt',
+    'nuxt-bootstrap-slider',
+
 
     // Or if you have custom bootstrap CSS...
     ['bootstrap-vue/nuxt', { css: false }],

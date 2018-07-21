@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div style="padding: 10px">
         <b-card :title="mahsool"
           img-src="https://i5.walmartimages.com/asr/9ad142d8-09c5-43c9-a618-646f75701d38_1.aca00e67749f0075fa12c4ee2f488510.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF"
           img-alt="Image"
