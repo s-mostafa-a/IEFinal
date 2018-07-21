@@ -5,7 +5,7 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <div style="text-align: center;margin: auto">
                   <a href="">
-<i class="fa fa-caret-square-o-left" style="font-size:48px;color:red"></i>
+<i class="fa fa-caret-square-o-left" style="font-size:48px;color:gray"></i>
                   </a>
       </div>
       <product-card/>
@@ -24,7 +24,7 @@
 
     <div style="text-align: center;margin: auto">
         <a href="">
-<i class="fa fa-caret-square-o-right" style="font-size:48px;color:red"></i>
+<i class="fa fa-caret-square-o-right" style="font-size:48px;color:gray"></i>
         </a>
     </div>
   </div>
