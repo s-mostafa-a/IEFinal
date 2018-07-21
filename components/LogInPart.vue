@@ -31,20 +31,28 @@
         </b-dropdown>
     </div>
     <div v-else>
-        <button type="button" class="sign_in">ورود</button>
-        <button type="button" class="sign_up">عضویت</button>
+        <button v-b-modal.vorood type="button" class="sign_in">ورود</button>
+        <button v-b-modal.ozviat type="button" class="sign_up">عضویت</button>
+            <login/>
+            <register/>
     </div>
     </div>
 </div>
 </template>
 <script>
+import Login from '~/components/Login.vue'
+import Register from '~/components/Register.vue'
 
 export default {
+    components:{
+        Login,
+        Register
+    },
 data() {
         //AJAX 
         // let info = fetch('my-api', {id: this.$route.params.id});
         return {
-            isLogin: true,
+            isLogin: false,
             name: 'محمد رجبی',
         }
     },
