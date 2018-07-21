@@ -23,7 +23,7 @@
         رنگ {{color}}<br>
                                 </div>
               <br>
-                              <div style="float:right;">
+                              <div style="float:right; text-align: center; margin: auto">
           <b-button size="lg" variant="danger">
 افزودن به سبد خرید
             </b-button>
@@ -56,16 +56,35 @@
 
   </div>
   <div>
-      <b-tabs>
-  <b-tab title="first" active>
-    <br>I'm the first fading tab
+      <b-tabs dir="rtl">
+  <b-tab title="مشخصات محصول" active dir="rtl">
+    <b-table striped="true"
+             :items="items" dir="rtl">
+    </b-table>
   </b-tab>
-  <b-tab title="second" >
-    <br>I'm the second tab content
+  <b-tab title="نظرات کاربران" dir="rtl">
+    <br>
+    <b-card title="علی گفته" >
+    خیلی خوبه
+    </b-card>
+        <br>
+    <b-card title="علی گفته">
+    عالیه
+    </b-card>
+        <br>
+    <b-card title="علی گفته">
+    مرسی
+    </b-card>
+    <br>
+        <button type="button" v-b-modal.comment class="tajrobe"> نظر </button>
+        <b-modal id="comment" title="افزودن نظر">
+      <form @submit.stop.prevent="handleSubmit">
+        <b-form-input type="text"
+                      placeholder="نظرتو بگو"
+                      ></b-form-input>
+      </form>  </b-modal>
   </b-tab>
-  <b-tab title="disabled" disabled>
-    <br>Disabled tab!
-  </b-tab>
+
 </b-tabs>
   </div>
 
@@ -129,7 +148,14 @@ export default {
       price: 1000,
       color: 'زرد',
       brand: 'برند',
-      name: 'کفش'
+      name: 'کفش',
+      items:[{'مشخصه':'مشخصه','مقدار':'مقدار'},
+      {'مشخصه':'مشخصه','مقدار':'مقدار'},
+      {'مشخصه':'مشخصه','مقدار':'مقدار'},
+      {'مشخصه':'مشخصه','مقدار':'مقدار'},
+
+      
+          ]
       }
   }
 }
@@ -143,6 +169,17 @@ export default {
 
 * {
     font-family: "my_iran_sans";
+}
+.tajrobe{
+    float: left;
+    font-size: 100%;
+    border: 1px solid #6464ff;
+    border-radius: 25px;
+    width: 20%;
+    color: #ffffff;
+    -webkit-transition: background-color 0.4s ease;
+    transition: background-color 0.4s ease;
+    background-color: #3232ff;
 }
 </style>
 
